@@ -6,14 +6,14 @@ class Question
     @total = @num_a + @num_b
   end
 
-  def each_q
-    puts "What does #{@num_a} plus #{@num_b} euqal?"
+  def each_q(player)
+    puts "#{player.name}: What does #{@num_a} plus #{@num_b} euqal?"
     ans = gets.chomp
     if ans.to_f == @total
-      puts "That's the correct answer!"
+      puts "#{player.name}: That's the correct answer!"
       return true
     else
-      puts "That's incorrect, the answer should be #{@total}"
+      puts "#{player.name}: That's incorrect, the answer should be #{@total}"
       return false
     end
 
